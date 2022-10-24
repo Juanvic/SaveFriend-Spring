@@ -1,0 +1,37 @@
+<div th:replace="~{layout :: layout ( ~{:: #conteudo})}">
+	<div class="row" id="conteudo">
+		<div class="card col-md-5">
+			<div class="col-md-9">
+				<div class="card-header">Cadastrar Friendcode</div>
+				<div class="card-body">
+					<h5 class="card-title">Preencha as Informações:</h5>
+					<form method="post" th:action="@{/friendcode/adicionar}">
+						<div class="mb-6 form-outline">
+							<input type="text" placeholder="Ex: Steam, Epic" class="form-control" name="plataform" id="plataform" th:value="${friendCode?.plataform}" data-mdb-showcounter="true" maxlength="20"/> 
+							<label class="form-label" for="plataform">Plataforma</label>
+							<div class="form-helper"></div>
+						</div>
+
+						<div class="mb-6 form-outline">
+							<input type="text" placeholder="Ex. LittleJoao, MariaX" class="form-control" name="name" id="name" th:value="${friendCode?.name}" data-mdb-showcounter="true" maxlength="50"/> 
+							<label class="form-label" for="name">Nome</label>
+							<div class="form-helper"></div>
+						</div>
+
+						<div class="mb-6 form-outline">
+							<input type="text" placeholder="Ex: 12345, 1111-2222" class="form-control" name="code" id="code" th:value="${friendCode?.code}" data-mdb-showcounter="true" maxlength="50"/> 
+							<label class="form-label" for="code">Código</label>
+							<div class="form-helper"></div>
+						</div>
+						
+						<button type="submit" class="btn btn-purple">Salvar</button>
+						<a class="btn btn-secondary" th:href="@{/}">Cancelar</a>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- FIM DA DIV ROW -->
+</div>

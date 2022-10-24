@@ -1,0 +1,32 @@
+<div th:replace="~{layout :: layout ( ~{:: #conteudo})}">
+	<div id="conteudo">
+		<div class="card">
+			<div class="card-header">Editar Friendcode</div>
+			<div class="card-body">
+				<h5 class="card-title">Altere as Informações:</h5>
+				<form th:method="put" th:action="@{/friendcode/editar/{id} (id=${friendCode.id})}">
+					<div class="mb-6 form-outline">
+						<input type="text" class="form-control" name="plataform" id="plataform" th:value="${friendCode?.plataform}" data-mdb-showcounter="true" maxlength="20"/>
+						<label class="form-label" for="plataform">Plataforma</label>
+						<div class="form-helper"></div>
+					</div>
+					
+					<div class="mb-6 form-outline">
+						<input type="text" class="form-control" name="name" id="name" th:value="${friendCode?.name}"data-mdb-showcounter="true" maxlength="50"/> 
+						<label class="form-label" for="name">Nome</label>
+						<div class="form-helper"></div>
+					</div>
+
+					<div class="mb-6 form-outline">
+						<input type="text" class="form-control" name="code" id="code" th:value="${friendCode?.code}" data-mdb-showcounter="true" maxlength="50"/> 
+						<label class="form-label" for="code">Código</label>
+						<div class="form-helper"></div>
+					</div>
+					<button type="submit" class="btn btn-orange mr-2">Editar</button>
+					<a class="btn btn-light" th:href="@{/}">Cancelar</a>
+				</form>
+			</div>	
+		</div>
+	</div>
+
+</div>

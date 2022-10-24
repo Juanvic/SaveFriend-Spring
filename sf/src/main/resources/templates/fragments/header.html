@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+	<header th:fragment="cabecalho">
+		<nav class="navbar">
+		  <div class="container-fluid">
+		  	
+		    <a class="navbar-brand" th:href="@{/}">SaveFriend</a>
+		    <a class="copy" th:href="@{/copy}"><i class="copy-header far fa-copy"></i></a>
+		    <!--  
+		    <a class="copy" th:href="@{/copy}"><i class="material-icons">content_copy</i></a>
+		    -->
+		  </div>
+		</nav>
+	</header>
+</body>
+</html>

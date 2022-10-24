@@ -1,0 +1,112 @@
+.material-icons {
+	color: #673ab7;
+}
+
+.bi{
+	color: #673ab7;
+}
+
+.fab-i{
+	background-color: transparent;
+	color: #673ab7;
+}
+
+.fab-i:hover {
+	color: green;
+	background-color: transparent;
+}
+.copy-header{
+	color: white;
+}
+
+.copy-header:hover{
+	color: gray;
+}
+
+.acoes {
+	font-size: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f5f5f5;
+    margin-left: 10px;
+}
+
+.navbar {
+	background-color: #673ab7;
+}
+
+.navbar .bi {
+	color: white;
+}
+
+.navbar-brand {
+	color: white;
+}
+
+.navbar-brand:hover {
+	color: white;
+}
+
+.fab {
+    position: fixed;
+    padding-top: 15;
+    margin-bottom: 0;
+    z-index: 997;
+    right: 24px;
+    bottom: 45px;
+    font-size: 50px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-purple {
+	background-color: #673ab7;
+	color: white;
+}
+
+.btn-purple:hover {
+	background-color: green;
+	color: white;
+}
+
+.btn-orange {
+	background-color: #673ab7;
+	color: white;
+}
+
+.btn-orange:hover{
+	background-color: #e4a11b;
+	color: white;
+}
+
+.btn-red {
+	background-color: #673ab7;
+	color: white;
+}
+
+.btn-red:hover {
+	background-color: red;
+	color: white;
+}
+
+.copy-icon:hover {
+	color: blue;
+}
+
+.edit-icon:hover {
+	color: #e4a11b;
+}
+
+.delete-icon:hover {
+	color: red;
+}
+
+
+  

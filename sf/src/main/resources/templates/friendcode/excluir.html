@@ -1,0 +1,36 @@
+<div th:replace="~{layout :: layout ( ~{:: #conteudo})}">
+	<div class="row" id="conteudo">
+		<div class="card col-md-5">
+			<div class="col-md-9">
+				<div class="card-header">Excluir Friendcode</div>
+				<div class="card-body">
+					<form th:method="delete" th:action="@{/friendcode/excluir/{id} (id=${friendCode.id}) }">
+						<div class="mb-6 form-outline">
+							<input type="text" class="form-control" name="plataform" id="plataform" th:value="${friendCode?.plataform}" readOnly="true"/> 
+							<label class="form-label" for="plataform">Plataforma</label>
+							<div class="form-helper"></div>
+						</div>
+
+						<div class="mb-6 form-outline">
+							<input type="text" class="form-control" name="name" id="name" th:value="${friendCode?.name}" readOnly="true"/> 
+							<label class="form-label" for="name">Nome</label>
+							<div class="form-helper"></div>
+						</div>
+
+						<div class="mb-6 form-outline">
+							<input type="text" class="form-control" name="code" id="code" th:value="${friendCode?.code}" readOnly="true"/> 
+							<label class="form-label" for="code">Código</label>
+							<div class="form-helper"></div>
+						</div>
+						
+						<button type="submit" class="btn btn-red">Excluir</button>
+						<a class="btn btn-secondary" th:href="@{/}">Cancelar</a>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- FIM DA DIV ROW -->
+</div>

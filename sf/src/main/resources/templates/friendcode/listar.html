@@ -1,0 +1,32 @@
+<div th:replace="~{layout :: layout ( ~{:: #conteudo})}">
+	<div class="table-responsive"  id="conteudo">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th class="text-center" scope="col">#</th>
+					<th class="text-center" id="p" scope="col">Plataforma</th>
+					<th class="text-center" scope="col">Nome</th>
+					<th class="text-center" scope="col">Código</th>
+					<th class="text-center" scope="col">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="friendCode : ${codes}">
+					<td class="text-center" th:text="${friendCode.id}">{{id}}</td>
+					<td class="text-center" th:text="${friendCode.plataform}">{{plataform}}</td>
+					<td class="text-center" th:text="${friendCode.name}">{{name}}</td>
+					<td class="text-center" th:text="${friendCode.code}">{{code}}</td>
+					<td class="acoes text-center">
+						<a class="copy"><i class="material-icons copy-icon">content_copy</i></a>
+						<!--  
+						-->
+						<a th:href="@{friendcode/editar/{id} (id=${friendCode.id})}"><i class="material-icons edit-icon">edit</i></a>
+						<a th:href="@{friendcode/excluir/{id} (id=${friendCode.id})}"><i class="material-icons delete-icon">delete</i></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>	
+<div th:replace="~{fragments/fab :: fab}">floating action button</div>
+
