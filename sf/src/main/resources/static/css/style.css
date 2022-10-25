@@ -8,7 +8,7 @@
 }
 
 .fab-i:hover {
-	color: green;
+	color: #3AB72A;
 	background-color: transparent;
 }
 .copy-header{
@@ -68,7 +68,7 @@ footer {
 }
 
 .btn-purple:hover {
-	background-color: green;
+	background-color: #3AB72A;
 	color: white;
 }
 
@@ -78,7 +78,7 @@ footer {
 }
 
 .btn-orange:hover{
-	background-color: #e4a11b;
+	background-color: #D19704;
 	color: white;
 }
 
@@ -88,30 +88,34 @@ footer {
 }
 
 .btn-red:hover {
-	background-color: red;
+	background-color: #C1381D;
 	color: white;
 }
 
 .copy-icon:hover {
-	color: blue;
+	color: #01ADAD;
 }
 
 .edit-icon:hover {
-	color: #e4a11b;
+	color: #D19704;
 }
 
 .delete-icon:hover {
-	color: red;
+	color: #C1381D;
 }
 
 input {
 	caret-color: #673ab7;
-	
+		
 }
 
 .icon-header{
 	color: white;
 	margin-left: 15px;
+}
+
+.icon-header:hover {
+	color: #01ADAD;
 }
 
 .darkmode-layer, .darkmode-toggle {

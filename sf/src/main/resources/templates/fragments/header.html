@@ -13,7 +13,7 @@
 		  <div class="container-fluid">
 		    <a class="navbar-brand" th:href="@{/}">SaveFriend</a>
 		    <div>
-			    <button class="btn-darkmode" th:href="@{/}" onClick="addDarkmodeWidget()"><i class="material-icons icon-header">dark_mode</i></button>
+			    <button class="btn-darkmode" onclick="addDarkmode()"><i class="material-icons icon-header">brightness_6</i></button>
 			    <a class="copy" th:href="@{/copy}"><i class="material-icons icon-header">content_copy</i></a>
 		    </div>
 		  </div>
@@ -21,11 +21,11 @@
 	<!-- Dark Mode -->
 	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 	<script>
-		function addDarkmodeWidget() {
+		function addDarkmode() {
 		  
 			const darkmode =  new Darkmode();
 			darkmode.toggle();
-			  
+			console.log(darkmode.isActivated()) // will return true  
 		  }
 	</script>
 	</header>
