@@ -1,5 +1,8 @@
 # SaveFriend-Spring
 
+![image](https://user-images.githubusercontent.com/15617091/197765279-48b7a298-39b6-4bc2-875f-23a5292a712e.png)
+
+
 Esse projeto é uma nova implementação da plataforma "SaveFriend" utilizando as tecnologias: Java Web, SpringBoot e MySQL
 
 # 1. Como iniciar o projeto ?
