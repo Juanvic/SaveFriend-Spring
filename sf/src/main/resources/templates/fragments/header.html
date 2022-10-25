@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 
 </head>
@@ -13,14 +11,27 @@
 	<header th:fragment="cabecalho">
 		<nav class="navbar">
 		  <div class="container-fluid">
-		  	
 		    <a class="navbar-brand" th:href="@{/}">SaveFriend</a>
-		    <a class="copy" th:href="@{/copy}"><i class="copy-header far fa-copy"></i></a>
-		    <!--  
-		    <a class="copy" th:href="@{/copy}"><i class="material-icons">content_copy</i></a>
-		    -->
+		    <div>
+			    <button class="btn-darkmode" th:href="@{/}" onClick="addDarkmodeWidget()"><i class="material-icons icon-header">dark_mode</i></button>
+			    <a class="copy" th:href="@{/copy}"><i class="material-icons icon-header">content_copy</i></a>
+		    </div>
 		  </div>
 		</nav>
+	<!-- Dark Mode -->
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+	<script>
+		function addDarkmodeWidget() {
+		  
+			const darkmode =  new Darkmode();
+			darkmode.toggle();
+			  
+		  }
+	</script>
 	</header>
+	
+	
 </body>
+
+
 </html>

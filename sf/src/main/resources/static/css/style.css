@@ -2,10 +2,6 @@
 	color: #673ab7;
 }
 
-.bi{
-	color: #673ab7;
-}
-
 .fab-i{
 	background-color: transparent;
 	color: #673ab7;
@@ -108,5 +104,22 @@ footer {
 	color: red;
 }
 
+input {
+	caret-color: #673ab7;
+	
+}
 
-  
+.icon-header{
+	color: white;
+	margin-left: 15px;
+}
+
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
+
+.btn-darkmode {
+	background-color: transparent;
+	border-style: hidden;
+}
+
