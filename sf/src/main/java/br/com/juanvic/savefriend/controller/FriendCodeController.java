@@ -1,7 +1,12 @@
 package br.com.juanvic.savefriend.controller;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,15 +31,15 @@ public class FriendCodeController {
 		ModelAndView mv = new ModelAndView("friendcode/adicionar.html");
 		return mv;
 	}
-	
 	@PostMapping("/adicionar")
-	public ModelAndView adicionar (FriendCode friendCode, RedirectAttributes redirectAtributes) {
+	public ModelAndView adicionar (@Valid FriendCode friendCode,BindingResult bindingResult, RedirectAttributes redirectAtributes) {
 		System.out.println(friendCode);
 		friendCodeService.salvarFC(friendCode);
 		ModelAndView mv = new ModelAndView("redirect:/");
 		redirectAtributes.addFlashAttribute("mensagemSucesso", "Código salvo com sucesso!");
 		return mv;
 	}
+	
 	
 	@GetMapping("/editar/{id}")
 	public ModelAndView telaEditar(@PathVariable Long id) {
@@ -45,11 +50,14 @@ public class FriendCodeController {
 	}
 	
 	@PutMapping("/editar/{id}")
-	public ModelAndView editar(@PathVariable Long id, FriendCode friendCode) {
+	public ModelAndView editar(@PathVariable Long id, FriendCode friendCode, RedirectAttributes redirectAtributes) {
 		friendCodeService.alterarFC(id, friendCode);
 		ModelAndView mv = new ModelAndView("redirect:/friendcode");
+		redirectAtributes.addFlashAttribute("mensagemSucesso", "Alteração de código realizada com sucesso!");
 		return mv;
 	}
+	
+	
 	
 	@GetMapping("/excluir/{id}")
 	public ModelAndView telaExcluir(@PathVariable Long id) {
@@ -58,6 +66,7 @@ public class FriendCodeController {
 		mv.addObject("friendCode", friendCode);
 		return mv;
 	}
+	
 	
 	@DeleteMapping("/excluir/{id}")
 	public ModelAndView deletar (@PathVariable Long id, RedirectAttributes redirectAttributes) {

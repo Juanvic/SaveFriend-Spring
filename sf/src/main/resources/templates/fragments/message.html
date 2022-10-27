@@ -1,0 +1,48 @@
+<div th:fragment="mensagens">
+	<div th:if="${mensagemSucesso != null}" class="alert alert-sucess alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<span th:text="${mensagemSucesso}"></span>
+	</div>
+	<div th:if="${mensagemFalha != null}" class="alert alert-danger alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<span th:if="${mensagemFalha instanceof T (java.lang.String)}" th:text="${mensagemFalha}"></span>
+		
+		<ul th:unless="${mensagemFalha instanceof T (java.lang.String)}">
+			<li th:each="mensagem:${mensagemFalha}" th:text="${mensagem}">
+		</ul>
+	</div>
+	<div th:if="${mensagemInfo != null}" class="alert alert-primary alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<span th:text="${mensagemInfo}"></span>
+	</div>
+	<div th:if="${session.mensagemInfo != null}" class="alert alert-primary alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert alert-primary alert-dismissible" role="alert"></button>
+		<span th:text="${session.mensagemInfo}"></span>
+	</div>
+</div>
+<!--  
+<div th:if="${success} != null">
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<i class="material-icons">check</i>
+		<span>
+			<strong th:text="${success}"></strong>
+		</span>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+</div>
+
+<div th:if="${fail} != null">
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<i class="material-icons">check</i>
+		<span>
+			<strong th:text="${fail}"></strong>
+		</span>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+</div>
+	
+-->

@@ -122,7 +122,7 @@ input {
   z-index: 500;
 }
 
-.btn-darkmode {
+.btn-fake {
 	background-color: transparent;
 	border-style: hidden;
 }

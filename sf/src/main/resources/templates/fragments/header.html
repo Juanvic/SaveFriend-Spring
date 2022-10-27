@@ -11,10 +11,10 @@
 	<header th:fragment="cabecalho">
 		<nav class="navbar">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" th:href="@{/}">SaveFriend</a>
+		    <a class="navbar-brand" id="titleheader" th:href="@{/}">SaveFriend</a>
 		    <div>
-			    <button class="btn-darkmode" onclick="addDarkmode()"><i class="material-icons icon-header">brightness_6</i></button>
-			    <a class="copy" th:href="@{/copy}"><i class="material-icons icon-header">content_copy</i></a>
+			    <button class="btn-fake" onclick="addDarkmode()"><i class="material-icons icon-header">brightness_6</i></button>
+			    <button class="copy btn-fake esseCopia" data-clipboard-target="#conteudo"><i class="material-icons icon-header">content_copy</i></button>
 		    </div>
 		  </div>
 		</nav>

@@ -36,7 +36,15 @@
 	<div class="layout-main">
 		<div th:replace="${conteudo}"></div>
 	</div>
-
+	
+    <!--  
+    <button class="btn" data-clipboard-text="1">Copy</button>
+    <button class="btn" data-clipboard-text="2">Copy</button>
+    <button class="btn" data-clipboard-text="3">Copy</button>
+    -->
+    
+    
+	
 	<div th:replace="~{fragments/footer :: rodape}">footer</div>
 	
 	<!-- MDB -->
@@ -46,7 +54,24 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 	
+	<!-- Clipboard.js -->
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 	
+	<script>
+      var clipboard = new ClipboardJS('.esseCopia');
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
 	
 </body>
 

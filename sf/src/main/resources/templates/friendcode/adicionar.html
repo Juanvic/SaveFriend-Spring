@@ -33,8 +33,10 @@
 					<button type="submit" class="btn btn-purple">Salvar</button>
 					<a class="btn btn-secondary" th:href="@{/}">Cancelar</a>
 				</form>
+				<div th:replace="~{fragments/message::mensagens}"></div>
 				<!--  
-				<div th:replace="fragments/alert"></div>
+				<div th:replace="~{fragments/message}"></div>
+				<div th:replace="fragments/message"></div>
 				-->
 				
 			</div>
